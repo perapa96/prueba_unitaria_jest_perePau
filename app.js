@@ -19,17 +19,17 @@ let oneEuroIs = {
 }
 
 const fromEuroToDollar = (euro) => {
-    return euro * 1.07;
+    return euro * oneEuroIs.USD;
 }
 
 
 const fromDollarToYen = (dollar) => {
-    return dollar * 156.5;
+    return (dollar / oneEuroIs.USD) * oneEuroIs.JPY
 }
 
 
 const fromYenToPound = (yen) => {
-    return yen * 0.87;
+    return (yen / oneEuroIs.JPY) * oneEuroIs.GBP
 }
 
 
